@@ -11,7 +11,8 @@ function App() {
     getStudents();
 
   }, []);
-  const API_URL = import .meta.env.VITE_API_URL || "http://localhost:3000";
+
+  const API_URL=import.meta.env.VITE_API_URL || "http://localhost:3000";
 
   // Fetch students and today's attendance
 
@@ -22,10 +23,10 @@ function App() {
       const [studentsRes, attendanceRes] = await Promise.all([
 
         //fetch("http://localhost:3000/students"),
-        fetch(`${API_URL}/students`),
+        fetch(`$ {API_URL}/students`),
 
-       // fetch("http://localhost:3000/attendance/today")
-       fetch(`${API_URL}/attendance`),
+        //fetch("http://localhost:3000/attendance/today")
+        fetch(`$ {API_URL}/attendance`),
 
       ]);
 
@@ -77,8 +78,7 @@ function App() {
 
       await fetch(
 
-        //"http://localhost:3000/attendance",
-        `${API_URL}/attendance`,
+        `$ {API_URL}/attendance`,
 
         {
 
@@ -186,8 +186,7 @@ function App() {
 
       const response = await fetch(
 
-       // "http://localhost:3000/attendance/today",
-       `${API_URL}/attendance/today`
+        `${API_URL}/attendance/today`,
 
         {
 
